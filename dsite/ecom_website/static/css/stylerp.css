@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+    color: RGB(242 218 0);
+    font-size: 20px;
+}
+body
+{
+    background-image: url('../images/foodtexcolor.jpg');
+    background-size:100%;
+    font-family: Arial, sans-serif;
+}
+::-webkit-input-placeholder { 
+    color: rgb(242 218 0);
+    background: rgb(59, 59, 59);
+    background-size: contain;
+    
+ }
+ 
+
+#login_form
+{
+    padding-top: 50px;
+    width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    height: 700px;
+    background-color: rgb(59, 59, 59);
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px #000000;
+    opacity: .94;
+}
+#welcome
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+#login
+{
+    margin-top: 100px;
+    height: 30px;
+    width: 350px;
+    text-align: left;
+    padding-left: 10px;
+    opacity: 1;
+    border: none;
+    background-color: rgb(57, 57, 57);
+    border-bottom: 2px solid rgb(37,37,37);
+}
+#pass
+{
+    height: 30px;
+    width: 350px;
+    text-align: left;
+    padding-left: 10px;
+    opacity: 1;
+    border: none;
+    background-color: rgb(57, 57, 57);
+    border-bottom: 2px solid rgb(37,37,37);
+}
+#submit:hover
+{
+    background-color: rgb(37,37,37);
+    -webkit-text-fill-color:rgb(242,218,0);
+    transition: 0.5s;
+}
+#submit
+{
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color:RGB(242 218 0);
+    -webkit-text-fill-color: rgb(57,57,57);
+    opacity: 1;
+    border: none;
+    cursor: pointer;
+}
+a:hover
+{
+    color: rgb(255, 0, 0);
+    -webkit-text-fill-color: RGB(242 218 0);
+    transition: 0.5s;
+}

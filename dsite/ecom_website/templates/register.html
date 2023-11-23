@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbawala</title>
+    <link rel="stylesheet" href="{% static 'css/signuperp.css' %}">
+</head>
+<body>
+
+    <div id="login_form">
+        <form name="signup" action="{% url 'register' %}"  method="post">
+
+            {% csrf_token %}
+
+            <br>
+            <h1 id="welcome">Dabbawala</h1><br>
+            <h3>Create a new account</h3><br><br>
+            <input type="text" placeholder="Email" id="pass" name="email" style="color:RGB(242 218 0)">
+            <br><br>
+            <input type="text" placeholder="Name" id="pass" name="name">
+            <br><br>
+            <input type="text" placeholder="Phone No." id="pass" name="phone_number">
+            <br><br>
+            <input type="password" placeholder="Password" id="pass" name="password">
+            <br><br>
+            <input type="password" placeholder="Password" id="pass" name="password_again">
+            <br><br>
+            {% for message in messages %}
+                <b style="color:crimson">{{message}}</b>
+            {% endfor %}
+            <br><br>
+            <input type="submit" id="submit" name="register" value="Register">
+            <br><br>
+            <h5>Already have an account?
+            <a href="{% url 'login' %}">Login</a></h5>
+        </form>
+    </div>
+
+</body>
+</html>

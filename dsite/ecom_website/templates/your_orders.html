@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+</head>
+<body>
+  <h1>Thank for ordering from DabbaWala !</h1>
+  <h2>
+    Your order with ::<br>
+    <b>Order Id: {{order_id}}</b><br>
+    <b>Total Price: ₹ {{total_price}}</b><br>
+    has been confirmed successfully...
+  </h2>
+
+  <a href="{% url 'homepage' %}"><button>Back to Home</button></a>
+    <!-- <table>
+        <tr>
+          <th>Order ID</th>
+          <th>Order Time-Stamp</th>
+          <th>Total amount for the week</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+      </table>  -->
+
+</body>
+
+<style>
+
+  h1 {
+    color: green;
+  }
+  h2 {
+    color: forestgreen;
+  }
+  b {
+    color: blueviolet;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    border: none;
+    background-color: gainsboro;
+    border-radius: 5px ;
+  }
+
+  table, th, td {
+    border:1px solid black;
+  }
+</style>
+
+</html>

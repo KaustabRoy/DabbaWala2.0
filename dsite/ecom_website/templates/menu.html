@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <link rel="stylesheet" href="{% static 'css/menustyle.css' %}"">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/logo.jpg' %}">
+
+
+        <input type="text" id="login-id" name="login-id" required placeholder="Search">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 1 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg> -->
+        <p>DabbaWala</p>
+        <img src="{% static 'images/cycle.png' %}" style="position: absolute; left: 28vw;">
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="#abtus">About</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="#">LogOut</a></li>
+        </ul>
+    </div>
+    <div class="category">
+        <h1>Create your menu</h1>
+    </div>
+    <br><br><br>
+
+    {% for day in days %}
+
+    <div class="products">
+        <!-- <div class="icon">
+            <img src="images/top pic/briryani.avif" id="image">
+        </div> -->
+        <div class="name2">
+            {{day.day_name}}
+        </div>
+        <div class="info2">
+            <button class="ibtn">i</button>
+            <div class="hide">
+                Add items you wish to have for {{day.day_name}}
+            </div>
+        </div>
+        <div class="add">
+            <a style="text-decoration: none; color: white;" href="item_selection/{{day.day_name}}"><button class="addbtn">+</button></a>
+        </div>
+    </div>
+
+    
+    <br><br>
+    {% endfor %}
+
+</body>
+</html>

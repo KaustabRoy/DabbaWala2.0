@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dabbawala</title>
+    <link rel="stylesheet" href="{% static 'css/stylerp.css' %}">
+</head>
+<body>
+
+    <div id="login_form">
+        <form name="login" action="{% url 'login' %}" method="post">
+
+            {% csrf_token %}
+
+            <br>
+            <h1 id="welcome">Dabbawala</h1><br>
+            <h3>Login to existing account</h3><br><br>
+            <input type="text" placeholder="Email" id="login" name="email">
+            <br><br><br>
+            <input type="password" placeholder="Password" id="pass" name="password">
+            <br><br>
+            {% for message in messages %}
+                <b style="color:crimson">{{message}}</b>
+            {% endfor %}
+            <br><br>
+            <input type="submit" id="submit" name="login" value="Login">
+            <br><br><br><br>
+            <h5>New to dabbawala?
+            <a href="{% url 'register' %}">Sign up</a></h5>
+        </form>
+    </div>
+
+</body>
+</html>

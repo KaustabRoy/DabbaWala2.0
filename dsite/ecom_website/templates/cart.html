@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <title>Your Cart</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/logo.jpg' %}">
+
+
+        <input type="text" id="login-id" name="login-id" required placeholder="Search">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 1 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg> -->
+        <p>DabbaWala</p>
+        <img src="{% static 'images/cycle.png' %}" style="position: absolute; left: 28vw;">
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'logout' %}">LogOut</a></li>
+        </ul>
+    </div>
+
+    <!-- <div style="width:60%;padding: 10px;text-align: right;" class="div-row" class="head-center"> -->
+        <!-- <tr>
+    <td style="text-align: center;">
+        <button><a href="command_order">Order</a></button> &nbsp;
+        <button><a href="{% url 'create_menu' %}">Return to creating menu</a></button> &nbsp;
+    </td>
+    
+        </tr> -->
+
+    <div class="cart-buttons" >
+        <button style="left: 85vw;top: 80vh;"><a href="command_order">Order</a></button> &nbsp;
+        <button  style="left: 2vw;top: 80vh;"><a href="{% url 'create_menu' %}">Return to creating menu</a></button> &nbsp;
+    </div>
+
+    <div class="cart-all">
+        <div class="cart-card" style="top:10vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">MONDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in monday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{mbtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in monday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{mltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in monday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{mdtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{monday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:100vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">TUESDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in tuesday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{tbtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in tuesday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{tltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in tuesday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{tdtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{tuesday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:190vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">WEDNESSDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in wednesday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{wbtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in wednesday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{wltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in wednesday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{wdtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{wednesday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:280vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">THURSDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in thursday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{thbtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in thursday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{thltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in thursday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{thdtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{thursday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:370vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">FRIDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in friday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{fbtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in friday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{fltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in friday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{fdtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{friday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:460vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">SATURDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in saturday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{sabtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in saturday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{saltprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in saturday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{sadtprice}}</td></tr>
+            </div>
+            <div class="day-total">Grand Total: ₹{{saturday_total_price}}</div>
+        </div>
+        <div class="cart-card" style="top:550vh">
+            <h1 style="position:absolute; left: 36vw; top: 2vh">SUNDAY</h1>
+            <div class="cart-incard">
+                <h2>Breakfast</h2>
+                {% for items in sunday_breakfast %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{subtprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Lunch</h2>
+                {% for items in sunday_lunch %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{sultprice}}</td></tr>
+            </div>
+            <div class="cart-incard">
+                <h2>Dinner</h2>
+                {% for items in sunday_dinner %}
+                    <h4>{{items}}</h4>
+                {% endfor %}
+                <tr><td>Total:{{sudtprice}}</td></tr>
+            </div>
+            <div class="day-total">Day Total: ₹{{sunday_total_price}}</div>
+        </div>
+    </div>
+    <div class="grand-total">
+        Grand Total: ₹{{total_week_price}}
+    </div>
+
+</body>
+
+<style>
+
+    
+
+</style>
+
+</html>

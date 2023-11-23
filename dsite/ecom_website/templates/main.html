@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <link href="{% static 'images/logo.jpg' %}" alt="logo">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/logo.jpg' %}">
+
+
+        <input type="text" id="login-id" name="login-id" required placeholder="Search">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 1 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg> -->
+        <p>DabbaWala</p>
+        <img src="{% static 'images/cycle.png' %}" style="position: absolute; left: 28vw;">
+        {% if user.is_authenticated %}
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="#abtus">About</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+            <li><a href="{% url 'logout' %}">LogOut</a></li> 
+        </ul>
+        {% else %}
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="#abtus">About</a></li>
+            <li><a href="{% url 'login' %}">LogIn or SignUp</a></li> 
+        </ul>
+        {% endif %}
+    </div>
+    <h2 style="color:#000;font-size:50px;font-family: Sofia;text-align: center; margin: 6.5vh 0 0 0">TOP PICKS</h2>
+        <div class="box">
+            <div class="slideimg">
+                <img src="{% static 'images/top pic/52eb9796bb9bcf0eba64c643349e97211634401116.avif' %}">
+                <p  style="top:50vh;left: 25vw;">Thali</p>
+                <img src="{% static 'images/top pic/5dbdb72a48cf3192830232f6853735301632716604.avif' %}">
+                <p  style="top:50vh;left: 36.5vw;">Momo</p>
+                <img src="{% static 'images/top pic/dosa.avif' %}">
+                <p  style="top:50vh;left: 48.8vw;">Dosa</p>
+                <img src="{% static 'images/top pic/ccb7dc2ba2b054419f805da7f05704471634886169.avif' %}">
+                <p  style="top:50vh;left: 60vw;">Burger</p>
+                <img src="{% static 'images/top pic/briryani.avif' %}">
+                <p  style="top:50vh;left: 71.8vw;">Biriyani</p>
+                <img src="{% static 'images/top pic/c21624eac87ed1c8c87ef1ea52980ded1632716659.avif' %}">
+                <p  style="top:75vh;left: 24vw;">Chowmin</p>
+                <img src="{% static 'images/top pic/c2f22c42f7ba90d81440a88449f4e5891634806087.avif' %}">
+                <p  style="top:75vh;left: 36.5vw;">Roll</p>
+                <img src="{% static 'images/top pic/d0bd7c9405ac87f6aa65e31fe55800941632716575.avif' %}">
+                <p  style="top:75vh;left: 48.8vw;">Pizza</p>
+                <img src="{% static 'images/top pic/d5ab931c8c239271de45e1c159af94311634805744.avif' %}">
+                <p  style="top:75vh;left: 60.5vw;">Cake</p>
+                <img src="{% static 'images/top pic/e444ade83eb22360b6ca79e6e777955f1632716661.avif' %}">
+                <p  style="top:75vh;left: 71.8vw;">Fried Rice</p>                
+            </div>
+            
+        </div>
+        <br>
+
+    {% if user.is_authenticated %}    
+    <div class="button">
+        <button><a href="{% url 'create_menu' %}">Create Menu</a></button>
+    </div>
+    {% else %}
+    <div class="button">
+        <button><a href="{% url 'register' %}">Get started</a></button>
+    </div>
+    {% endif %}
+
+
+    <div class="cart">
+        <a href="{% url 'cart' %}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg></a>
+    </div>
+
+    <h1 style="color:#000;font-size:50px;padding:3px 20px;position: relative;top:190vh;font-family: Sofia;text-align: center;">Customer Review</h1>
+    
+    <div class="review" style="left: 2vw">
+        <div class="profile1">
+            <img src="{% static 'images/reviewers/p1.jpg' %}" >
+            <p>Trina Das</p>
+            <br>
+            <p>Great food delivery system on subscription basis! The convenience of having delicious meals delivered straight to my doorstep is unbeatable. Plus, the ability to customize my meals and dietary preferences is a game-changer. Highly recommend!</p>
+        </div>
+    </div>
+    <div class="review"  style="left: 27vw">
+        <div class="profile2">
+            <img src="{% static 'images/reviewers/p2.jpg' %}" >
+            <p>Surovi Ghosh</p>
+            <br>
+            <p>Love the convenience of the food delivery subscription service! Meals arrive on time and always fresh. Definitely worth the investment.</p>
+        </div>
+    </div>
+    <div class="review" style="left: 52vw">
+        <div class="profile3">
+            <img src="{% static 'images/reviewers/p3.jpg' %}" >
+            <p>Sudipto Sen</p>
+            <br>
+            <p>Efficient and convenient food delivery service on a subscription basis. Saves time and hassle of ordering every time. Highly recommended.</p>
+        </div>
+    </div>
+    <div class="review" style="left: 77vw">
+        <div class="profile4">
+            <img src="{% static 'images/reviewers/p4.jpg' %}" >
+            <p>Kaustav Roy</p>
+            <br>
+            <p>Highly convenient and reliable food delivery service on a subscription basis. Always on time with a great selection of restaurants to choose from. Saves me time and hassle while satisfying my cravings. Definitely recommend!</p>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div id="box">
+            <a href="#abtus"><button id="abt">About Us</button></a>
+            <br>
+            <a href="contact.html"><button id="abt">Contact Us</button></a>
+        </div>
+    </div>
+    <h1 style="color:#000;font-size:50px;padding:3px 20px;position: relative;top:13vh;font-family: Sofia;text-align: center;">About Us</h1>
+    <!-- slider 1 -->
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+
+            <div class="slide first">
+                <img src="{% static 'images/slides/s1.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/slides/s2.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/slides/s3.jpg' %}" alt="">
+            </div>
+            <div class="slide">
+                <img src="{% static 'images/slides/s4.jpg' %}" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+              
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+          
+     </div>
+     <script type="text/javascript">
+     var counter = 1;
+     setInterval(function(){
+        document.getElementById('radio'+ counter).checked = true;
+        counter++;
+        if(counter > 4){
+            counter = 1;
+        }
+     }, 5000);
+     </script>   
+    <!-- end slider 1 -->
+    <h1 style="color:#000;font-size:50px;padding:3px 20px;position: relative;top:40vh;font-family: Sofia;text-align: center;">Offers</h1>
+    <!-- slider 2 -->
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="{% static 'images/offer/swiggy-new-user-offer.jpg' %}" alt="" style="padding-left: 270px;"></div>
+              <div class="swiper-slide"><img src="{% static 'images/offer/coupon.jpg' %}" alt="" style="padding-left: 230px;"></div>
+              <div class="swiper-slide"><img src="{% static 'images/offer/banner 1.jpg' %}" alt=""></div>
+              <div class="swiper-slide"><img src="{% static 'images/offer/1546252575451.png' %}" alt="" style="padding-left: 300px;"></div>
+            </div>
+        
+        </div>
+    </div>
+    <!-- end slider 2 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+    const swiper = new Swiper('.swiper', {
+    autoplay:{
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+
+});
+    </script>
+
+</body>
+</html>

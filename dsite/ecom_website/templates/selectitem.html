@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/mainstyle.css' %}">
+    <title>Create_menufor=days</title>
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/logo.jpg' %}">
+
+
+        <input type="text" id="login-id" name="login-id" required placeholder="Search">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 1 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg> -->
+        <p>DabbaWala</p>
+        <img src="{% static 'images/cycle.png' %}" style="position: absolute; left: 28vw;">
+        <ul>
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="#">LogOut</a></li>
+        </ul>
+    </div>
+    
+    <form action="{% url 'save_items_by_day' %}" method="post">
+    {% csrf_token %}
+    <h1>Select items for <input type="checkbox" name="selected_day" value="{{selected_day}}" checked style="display: none;">{{selected_day}}</h1>
+
+
+    <div class="breakfast">       
+        <h1 style="font-size: 45pt ;">Breakfast</h1>
+        <div class="line"></div><br><br>
+        <input type="text" id="breakfastitemslist" name="breakfast_list" style="display:none;">
+        <br>
+        {% for item in breakfast_items %}
+        
+        <div class="products">
+            
+            <img src="{{item.items_img.url}}" class="card-img-top" alt="..." height="100" width="100"><br>
+            <b>{{item.title}}</b><br>
+            {{item.descrption}}<br>
+            ₹ {{item.price}}
+            <br>
+            <input type="checkbox" class="breakfastitems" name="items" value="{{item.id}}">
+        </div>
+        {% endfor %}
+    </div> 
+
+    <div class="lunch">
+        <h1 style="font-size: 45pt ;">Lunch</h1>
+        <div class="line"></div><br><br>
+        <input type="text" id="lunchitemslist" name="lunch_list" style="display:none;">
+        <br>
+        {% for item in lunch_items %}
+        <div class="products">
+            
+            <img src="{{item.items_img.url}}" class="card-img-top" alt="..." height="100" width="100"><br>
+            <b>{{item.title}}</b><br>
+            {{item.descrption}}<br>
+            ₹ {{item.price}}
+            <br>
+            <input type="checkbox" class="lunchitems" name="items" value="{{item.id}}">
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="dinner">
+        <h1 style="font-size: 45pt ;">Dinner</h1>
+        <div class="line"></div><br><br>
+        <input type="text" id="dinneritemslist" name="dinner_list" style="display:none;">
+        <br>
+        {% for item in dinner_items %}
+        <div class="products">
+            
+            <img src="{{item.items_img.url}}" class="card-img-top" alt="..." height="100" width="100"><br>
+            <b>{{item.title}}</b><br>
+            {{item.descrption}}<br>
+            ₹ {{item.price}}
+            <br>
+            <input type="checkbox" class="dinneritems" name="items" value="{{item.id}}">
+        </div>
+        {% endfor %}
+    
+    </div>
+
+    <input type="submit" value="Add to cart" class="submit">
+
+    </form>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $('.breakfastitems').click(function(){
+            var txt = "";
+            $('.breakfastitems:checked').each(function(){
+                txt += $(this).val()+","
+            });
+            $('#breakfastitemslist').val(txt);
+        });
+    });
+
+    $(document).ready(function(){
+        $('.lunchitems').click(function(){
+            var txt = "";
+            $('.lunchitems:checked').each(function(){
+                txt += $(this).val()+","
+            });
+            $('#lunchitemslist').val(txt);
+        });
+    });
+
+    $(document).ready(function(){
+        $('.dinneritems').click(function(){
+            var txt = "";
+            $('.dinneritems:checked').each(function(){
+                txt += $(this).val()+","
+            });
+            $('#dinneritemslist').val(txt);
+        });
+    });
+</script>
+
+</html>

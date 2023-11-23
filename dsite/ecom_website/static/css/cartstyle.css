@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('../images/foodtexcolor.jpg');
+    background-size:100%;
+    
+}
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-thumb{
+    background:crimson;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(172, 16, 47);
+}
+/* header */
+.header{
+    background-color: rgb(172, 16, 47) ;
+    box-shadow: 0px 0px 10px black;
+}
+
+.header img{
+    width:80px;
+    border-radius: 100%;
+    padding: 10px 30px;
+}
+
+
+.header p{
+    position: absolute;
+    font-size: 70px;
+    top: 12px;
+    left: 180px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.header input{
+    width:30vw;
+    height:5vh;
+    padding-left: 20px; 
+    font-size: 20px;
+    position: absolute;
+    top: 2.5vh;
+    left: 35vw;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px black;
+}
+.header ul{
+    float: right;
+    margin-right: 20px;
+}
+
+.header ul li{
+    display: inline-block;
+    line-height:80px;
+    margin:5px 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.header ul li a{
+    color:#000;
+    font-size: 17px;
+    text-transform: upper-case;
+    font-size: 28px;
+    text-decoration: none;
+}
+.header ul li a:hover{
+    background: #ffffff;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* footer */
+.footer{
+    background-color: rgb(172, 16, 47);
+    position: relative;
+    top: 200vh;
+    height: 100px;
+    width: 100%;
+    color: aliceblue;
+    text-align: center;
+
+}
+#box
+{
+    background-color: crimson;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    border-right: 2px solid white;
+}
+#abt:hover
+{
+    background-color: whitesmoke;
+    transition: 1s;
+    color: black;
+}
+#abt
+{
+    background-color:rgb(172, 16, 47) ;
+    border-radius: 30px;
+    border: 2px solid whitesmoke;
+    height: 35px;
+    width: 100px;
+    margin-top: 10px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+#products
+{
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 20px;
+}
+/* Top picks */
+.featured
+{
+    background-color: rgba(250, 235, 215, 0);
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.box{
+    margin:4vh 0;
+    width:99vw;
+    height:200px;
+    background-color: rgba(255, 255, 255, 0.337);
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
+    border-radius:10px;
+
+}
+.slideimg img{
+    width: 150px;
+    border-radius: 100%;
+    padding:5px 17px;
+    cursor: pointer;
+}
+.slideimg p{
+    position: absolute;
+    font-weight: bold;
+}
+
+.featured:hover
+{
+    background-color: rgba(220, 20, 60, 0.6);
+    box-shadow: 3px 5px 0px black;
+    transition: 1s;
+    color: white;
+}
+/* buttons */
+.button button{
+    position: absolute;
+    top: 60vh;
+    left: 82vh;
+    height: 60px;
+    width:200px;
+    margin:0 35px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #111;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.button button a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.button button:hover{
+    color: #fff;
+    background: #f32121;
+    box-shadow: 0 0 10px #f32121,0 0 40px #f32121,0 0 80px #f32121;
+    transition: 0.5s;
+}
+/* cart */
+.cart{
+    position:fixed;
+    padding: 23px 5px 13px 25px;
+    bottom: 13vh;
+    right:1vw;
+    background: #f32121;
+    width:2.5vw;
+    height:4vh;
+    border-radius: 100px;
+    color: white;
+    z-index: 2;
+}
+
+.cart:hover{
+    background: #6b0707;
+}
+/* customer Review */
+.review{
+    position: absolute;
+    left:30vw;
+    top:200vh;
+    background: #000000b7;
+    width: 20vw;
+    height: 45vh;
+    border-radius: 10px;
+}
+
+.review p{
+    color: red;
+    font-size: 30px;
+    margin-left: 120px;  
+
+}
+.review p:last-child{
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 25px;
+    margin-left: 2px;
+    text-align: center;
+
+}
+.review  img{
+    border-radius: 150px;
+    width: 150px;
+    background:#f32121;
+    padding:3px;
+    margin: 10px 120px;
+    
+}
+
+.card{
+    position: relative;
+    background: rgba(0, 0, 0, 0.753);
+    width:550px;
+    height: 700px;
+    top:15vh;
+    left:35vw;
+    border-radius: 50px;
+}
+.card-division{
+    position: absolute;
+    background: #6b0707;
+    width: 550px;
+    height:200px;
+    border-radius:50px 50px 0 0;
+}
+.card img{
+    position: relative;
+    border-radius: 100%;
+    width: 250px;
+    top: 20px;
+    left: 7vw;
+    padding: 10px; 
+    background: #6b0707
+}
+.card p{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    word-spacing: 2px;
+}
+
+.cart-card{
+    display:flex;
+    gap:100px;
+    position:absolute;
+    background-color: rgba(255, 255, 255, 0.699);
+    width:70vw;
+    height: 55vh;
+    top:20vh;
+    left: 10vw;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px #00000057;
+}
+.cart-incard{
+    background:#000000c4;
+    padding: 20px;
+    width: 100vw;
+    height: 40vh;
+    text-align: center;
+    border-radius: 20px;
+    color:yellow;
+    box-shadow: 5px 5px 10px 0 #00000077;
+}
+
+.cart-all{
+   position: absolute;
+}
+
+.day-total{
+    border:1px solid black;
+    position:absolute;
+    float:left;
+    width:87%;
+    text-align: center;
+    margin-top: 480px;
+    font-size: 2em;
+    background-color: beige;
+    border-radius: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,227 @@
+<div class="main-div">
+<h1 class="head-center">Your Cart</h1>
+
+
+<!-- MONDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Monday</h2>
+
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in monday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{mbtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in monday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{mltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in monday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{mdtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{monday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- TUESDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Tuesday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in tuesday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{tbtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in tuesday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{tltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in tuesday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{tdtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{tuesday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- WEDNESDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Wednesday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in wednesday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{wbtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in wednesday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{wltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in wednesday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{wdtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{wednesday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- THURSDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Thursday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in thursday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{thbtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in thursday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{thltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in thursday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{thdtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{thursday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- FRIDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Friday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in friday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{fbtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in friday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{fltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in friday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{fdtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{friday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- SATURDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Saturday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in saturday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{sabtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in saturday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{saltprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in saturday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{sadtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{saturday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<!-- SUNDAY -->
+<div style="width: 150px;padding: 5px;border: 1px solid black;border-radius: 5px;" class="div-row" class="head-center">
+    <h2 style="color: crimson;">Sunday</h2>
+    
+    <h3 style="color: green;">Breakfast</h3>
+    {% for items in sunday_breakfast %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{subtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Lunch</h3>
+    {% for items in sunday_lunch %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{sultprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <h3 style="color: green;">Dinner</h3>
+    {% for items in sunday_dinner %}
+        <h4>{{items}}</h4>
+    {% endfor %}
+    <tr><td>Total:{{sudtprice}}</td></tr>
+    <tr><td><hr/></td></tr>
+    <tr><td>Grand Total: {{sunday_total_price}} </td></tr>
+    <tr><td><hr/></td></tr>
+</div>
+
+<h4>Total price for the week: <b style="color:blueviolet">₹ {{total_week_price}} </b></h4>
+
+
+<div style="width:60%;padding: 10px;text-align: right;" class="div-row" class="head-center">
+    <tr>
+<td style="text-align: center;">
+    <button><a href="command_order">Order</a></button> &nbsp;
+    <button><a href="{% url 'create_menu' %}">Return to creating menu</a></button> &nbsp;
+</td>
+
+    </tr>
+
+    
+</div>
+
+</div>
+
+
+<style>
+    .div-row {
+        display: inline-block;
+        position: relative;
+        margin-top: 10px;
+        float: left;
+    }
+    .input-btn{
+        width: 200px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    .main-div{
+        width:61%;
+        margin: 10px auto;
+       
+    }
+    .head-center{
+        text-align: center;
+       
+    }
+</style>

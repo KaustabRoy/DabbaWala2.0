@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-image: url(images/foodtexcolor.jpg);*/
+    background-size: 100%;
+}
+
+.header {
+    background-color: rgb(172, 16, 47);
+    box-shadow: 0px 0px 10px black;
+    /* border-radius: 0px 0px 10px 10px; */
+}
+
+.header img {
+    width: 80px;
+    border-radius: 100%;
+    padding: 10px 30px;
+}
+
+.header p {
+    position: absolute;
+    font-size: 70px;
+    top: 12px;
+    left: 180px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header input {
+    width: 30vw;
+    height: 5vh;
+    padding-left: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 2.5vh;
+    left: 35vw;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    box-shadow: 0px 0px 10px black;
+}
+
+.header ul {
+    float: right;
+    margin-right: 20px;
+}
+
+.header ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 5px 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header ul li a {
+    color: #000;
+    font-size: 17px;
+    text-transform: upper-case;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.header ul li a:hover {
+    background: #ffffff;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.category {
+    height: 100px;
+    width: 1200px;
+    text-align: center;
+    padding-top: 10px;
+    margin: auto;
+    font-size: 30px;
+    border-bottom: 5px solid black;
+}
+
+.products {
+    height: 100px;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#image {
+    height: 100px;
+    width: 100px;
+}
+
+.name2 {
+    background-color: crimson;
+    height: 75px;
+    width: 850px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding-top: 25px;
+    padding-left: 50px;
+    font-size: 40px;
+    margin-left: 50px;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.info2 {
+    background-color: crimson;
+    height: 100px;
+    width: 150px;
+    display: inline-block;
+    border-radius: 0px 50px 50px 0px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.ibtn {
+    height: 50px;
+    width: 50px;
+    margin: 25px 40px 25px 30px;
+    border: none;
+    border-radius: 100%;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: antiquewhite;
+}
+
+.hide {
+    display: none;
+}
+
+.ibtn:hover+.hide {
+    background-color: blanchedalmond;
+    height: 150px;
+    width: 200px;
+    border-radius: 20px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    display: block;
+    font-size: 20px;
+    color: black;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.add {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    font-size: 90px;
+    border-radius: 100%;
+}
+
+.addbtn {
+    background-color: #DC143C;
+    height: 100px;
+    width: 100px;
+    vertical-align: top;
+    border-radius: 100%;
+    font-size: 90px;
+    border: none;
+}
+
+.addbtn:hover{
+    background: #f32121;
+    box-shadow: 0 0 10px #f32121,0 0 40px #f32121,0 0 80px #f32121;
+    transition: 0.5s;
+}
