@@ -22,12 +22,14 @@
 </head>
 
 <body>
-  <div class="order-successful-section">
+  <div class="order-successful-section pt-5 pb-5">
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="order-successful-section-heading">Order Successful !!</h1>
-          <p class="order-successful-section-message">Your order has been successfully confirmed ...</p>
+          <div class="text-center">
+            <h1 class="order-successful-section-heading">Order Successful !!</h1>
+            <p class="order-successful-section-message">Your order has been successfully confirmed ...</p>
+          </div>
         </div>
         <div class="col-12">
           <div class="text-center">
@@ -35,8 +37,15 @@
           </div>
         </div>
         <div class="col-12">
-          <p class="label-text">Order ID: <span>{{order_id}}</span></p>
-          <p class="label-text">Total Amount: ₹<span>{{total_price}}</span></p>
+          <div class="text-center pt-2 pb-2 shadow mt-3 mb-3">
+            <p class="label-text">Order ID: <span class="value-text">{{order_id}}</span></p>
+            <p class="label-text">Total Amount: ₹<span class="value-text">{{total_price}}</span></p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="text-center">
+            <a href="{% url 'homepage' %}"><button class="btn btn-primary">Continue Shopping</button></a>
+          </div>
         </div>
       </div>
     </div>

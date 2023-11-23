@@ -18,4 +18,19 @@
 
 .confirm-icon {
     font-size: 40px;
+    color: #22cd3e;
+}
+
+.label-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    font-weight: 700px;
+    color: #51575a;
+}
+
+.value-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    color: #577347;
 }
