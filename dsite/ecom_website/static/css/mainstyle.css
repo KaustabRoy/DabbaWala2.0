@@ -166,7 +166,7 @@ body
 /* buttons */
 .button button{
     position: absolute;
-    top: 95vh;
+    top: 90vh;
     left: 43vw;
     height: 60px;
     width:200px;
@@ -174,7 +174,7 @@ body
     border-radius: 50px;
     border: none;
     outline: none;
-    background: #111;
+    background: rgb(172, 16, 47);
     letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
