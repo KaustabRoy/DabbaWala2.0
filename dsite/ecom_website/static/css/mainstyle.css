@@ -606,7 +606,7 @@ body
 	grid-template-columns: repeat(var(--num-cols), 1fr);
 	grid-auto-rows: var(--row-height);
 	gap: var(--gap);
-    margin-top: 30px;
+    margin-top: 200px;
 }
 
 .image-grid>img {
