@@ -595,7 +595,7 @@ body
 /* image */
 
 .image-grid {
-	--gap: 16px;
+	--gap: 6px;
 	--num-cols: 4;
 	--row-height: 300px;
 
